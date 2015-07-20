@@ -1,0 +1,19 @@
+<h1> Attinderance | Student Index </h1>
+
+<p>This is where a list of all students will be found. </p>
+
+<p>User/Teacher can choose to create a new student, update an existing one or delete a student from the list.</p>
+<br>
+<ul>
+  <li>Student</li>
+    <ol>
+    <% @students.each do |student| %>
+    <li> <%= student.name %></li>
+     <%= link_to 'Edit', edit_student_path(student) %>
+    <% end %>
+  </ol>
+</ul>
+<br>
+<p>Want to create a new student? Click here: <%= link_to 'New', new_student_path %>
+<p>Find me in app/views/students/index.html.erb</p>
+<p>Updated by Mlworle on 27/7/15</p>
