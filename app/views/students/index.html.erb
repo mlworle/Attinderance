@@ -10,10 +10,13 @@
     <% @students.each do |student| %>
     <li> <%= student.name %></li>
      <%= link_to 'Edit', edit_student_path(student) %>
+     <%= link_to 'Delete', student, method: :delete, data: {confirm: 'Are you sure?'} %>
     <% end %>
   </ol>
 </ul>
 <br>
-<p>Want to create a new student? Click here: <%= link_to 'New', new_student_path %>
+<h2><p>Want to create a new student? Click here: <%= link_to 'New', new_student_path %></h2>
+<br>
+<br>
 <p>Find me in app/views/students/index.html.erb</p>
-<p>Updated by Mlworle on 27/7/15</p>
+<p>Updated by Mlworle on <%= Time.zone.now %></p>
