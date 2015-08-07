@@ -1,12 +1,6 @@
   Rails.application.routes.draw do
-  get 'teacher/new'
-
-  get 'teacher/edit'
-
-  get 'teacher/delete'
-
-  get 'teacher/view'
-
+  resources :teachers
+  
   get 'static_pages/home'
   get 'static_pages/help'
   get 'static_pages/about'
