@@ -7,18 +7,18 @@
 <ul>
   <li>Teacher</li>
     <ol>
-    <% @teachers.each do |teacher| %>
-    <li> <%= teacher.name %></li>
-     <%= link_to 'Edit', edit_teacher_path(teacher) %>
-     <%= link_to 'Delete', teacher, method: :delete, data: {confirm: 'Are you sure?'} %>
-    <% end %>
+    <% @teachers.each do |teacher|  %>
+    <li> <%= teacher.name  %></li>
+     <%= link_to 'Edit', edit_teacher_path(teacher)  %>
+     <%= link_to 'Delete', teacher, method: :delete, data: {confirm: 'Are you sure?'}  %>
+    <% end  %>
   </ol>
 </ul>
 <br>
-<h2><p>Want to create a new teacher? Click here: <%= link_to 'New', new_teacher_path %></h2>
+<h2><p>Want to create a new teacher? Click here: <%= link_to 'New', new_teacher_path  %></h2>
 <br>
 <br>
 <h2>Side Bar</h2>
-<p><%= render "side_bar" %></p>
+<p><%= render "side_bar"  %></p>
 <p>Find me in app/views/teachers/index.html.erb</p>
-<p>Updated by Mlworle on <%= Time.zone.now %></p>
+<p>Updated by Mlworle on <%= Time.zone.now  %></p>
