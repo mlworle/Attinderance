@@ -1,0 +1,24 @@
+<h1> Attinderance | Course Index </h1>
+
+<p>This is where a list of all courses will be found. </p>
+
+<p>User/Course can choose to create a new course, update an existing one or delete a course from the list.</p>
+<br>
+<ul>
+  <li>Course</li>
+    <ol>
+    <% @courses.each do |course|  %>
+    <li> <%= course.name  %></li>
+     <%= link_to 'Edit', edit_course_path(course)  %>
+     <%= link_to 'Delete', course, method: :delete, data: {confirm: 'Are you sure?'}  %>
+    <% end  %>
+  </ol>
+</ul>
+<br>
+<h2><p>Want to create a new course? Click here: <%= link_to 'New', new_course_path  %></h2>
+<br>
+<br>
+<h2>Side Bar</h2>
+<p><%= render "side_bar"  %></p>
+<p>Find me in app/views/courses/index.html.erb</p>
+<p>Updated by Mlworle on <%= Time.zone.now  %></p>
