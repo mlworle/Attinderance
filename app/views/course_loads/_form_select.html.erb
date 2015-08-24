@@ -1,0 +1,6 @@
+<%= form_for (@course_load)  do |f|  %>
+  <%= f.select :teacher_id, Teacher.all.collect {|p| [p.name, p.id]} %>
+  <%= f.select :course_id, Course.all.collect {|p| [p.name, p.id]} %>
+
+  <%= f.submit  %>
+<% end  %>

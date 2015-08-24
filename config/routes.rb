@@ -7,4 +7,5 @@
   resources :students
   resources :teachers
   resources :courses 
+  resources :course_loads
  end

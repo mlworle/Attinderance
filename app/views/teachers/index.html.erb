@@ -4,22 +4,22 @@
 
 <p>User/Teacher can choose to create a new teacher, update an existing one or delete a teacher from the list.</p>
 <br>
-<ul>
-  <li>Teacher</li>
+<p>Teacher</p>
     <ol>
-    <% @teachers.each do |teacher|  %>
-    <li> <%= teacher.name  %></li>
-     <%= link_to 'Edit', edit_teacher_path(teacher)  %>
-     <%= link_to 'Delete', teacher, method: :delete, data: {confirm: 'Are you sure?'}  %>
-     <%= link_to 'Courses', @course_loads(teacher).course %>
-    <% end  %>
+    <% @teachers.each do |teacher| %>
+    <li> <%= teacher.name %></li>
+    <ul>
+        <li><%= link_to 'Edit', edit_teacher_path(teacher) %></li>
+        <li><%= link_to 'Courseload', course_loads_path %></li>
+        <li><%= link_to 'Delete', teacher, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+    </ul>
+    <% end %>
   </ol>
-</ul>
 <br>
-<h2><p>Want to create a new teacher? Click here: <%= link_to 'New', new_teacher_path  %></h2>
+<h2><p>Want to create a new teacher? Click here: <%= link_to 'New', new_teacher_path %></h2>
 <br>
 <br>
 <h2>Side Bar</h2>
-<p><%= render "side_bar"  %></p>
+<p><%= render "side_bar" %></p>
 <p>Find me in app/views/teachers/index.html.erb</p>
-<p>Updated by Mlworle on <%= Time.zone.now  %></p>
+<p>Updated by Mlworle on <%= Time.zone.now %></p>
