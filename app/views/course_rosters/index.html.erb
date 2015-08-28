@@ -1,0 +1,23 @@
+<h1> Attinderance | Courseload Index </h1>
+<p>This is where a list of all courserosters will be found. </p>
+<br>
+<p>Course</p>
+    <% @course_rosters.each do |courseroster| %>
+        <ul>
+        <%= courseroster.course.name %>
+        <% for courseroster.course.name in @course_rosters do %> 
+          <ul>
+          <li><%= courseroster.student.name %></li>
+          </ul>
+        </ul>
+        <% end %>
+    <% end %>
+
+<br>
+<h2><p>Want to create a new courseroster? Click here: <%= link_to 'New', new_course_roster_path %></p></h2>
+<br>
+<br>
+<h2>Side Bar</h2>
+<p><%= render "side_bar" %></p>
+<p>Find me in app/views/course_rosters/index.html.erb</p>
+<p>Updated by Mlworle on <%= Time.zone.now %></p>

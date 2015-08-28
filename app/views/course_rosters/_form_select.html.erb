@@ -1,0 +1,6 @@
+<%= form_for (@course_roster)  do |f|  %>
+  <%= f.select :student_id, Student.all.collect {|p| [p.name, p.id]} %>
+  <%= f.select :course_id, Course.all.collect {|p| [p.name, p.id]} %>
+
+  <%= f.submit  %>
+<% end  %>

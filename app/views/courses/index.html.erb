@@ -11,6 +11,8 @@
     <li> <%= course.name  %></li>
      <%= link_to 'Edit', edit_course_path(course)  %>
      <%= link_to 'Delete', course, method: :delete, data: {confirm: 'Are you sure?'}  %>
+     <%= link_to 'Teacher', teachers_path %>
+     <%= link_to 'Roster', course_rosters_path %>
     <% end  %>
   </ol>
 </ul>

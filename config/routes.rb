@@ -8,4 +8,5 @@
   resources :teachers
   resources :courses 
   resources :course_loads
+  resources :course_rosters
  end
