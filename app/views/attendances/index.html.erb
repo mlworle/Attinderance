@@ -1,0 +1,18 @@
+<h1> Attinderance | Attendance Index </h1>
+<p>This is where a list of all attendances will be found. </p>
+<br>
+    <% @attendances.each do |attendance| %>
+<!--Display Student, Date, Present -->		`
+        <ul>
+        <li><%= attendance.student_id %></li>
+        </ul>
+    <% end %>
+
+<br>
+<h2><p>Want to create a new attendance? Click here: <%= link_to 'New', new_attendance_path %></p></h2>
+<br>
+<br>
+<h2>Side Bar</h2>
+<p><%= render "side_bar" %></p>
+<p>Find me in app/views/attendances/index.html.erb</p>
+<p>Updated by Mlworle on <%= Time.zone.now %></p>

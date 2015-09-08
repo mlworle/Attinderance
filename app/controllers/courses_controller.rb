@@ -48,5 +48,6 @@ def index
   end
 
   def show
+    @courses = Course.all
   end
 end

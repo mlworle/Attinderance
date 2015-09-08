@@ -1,0 +1,24 @@
+<%= form_for(@attendance) do |f| %>
+  <% if @attendance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@attendance.errors.count, "error") %> prohibited this attendance from being saved:</h2>
+      <ul>
+      <% @attendance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_id %> 
+    <%= f.select :student_id, Student.all.collect {|p| [p.name, p.id]} %>
+    <%= f.label :session_id %>
+    <%= f.select :session_id, Session.all.collect {|s| ["#{s.course.name} - #{s.date}", s.id]} %>
+    <br><%= f.label :present %>
+    <%= f.check_box :present %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

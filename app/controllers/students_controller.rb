@@ -38,7 +38,7 @@ class StudentsController < ApplicationController
   end
 
   def student_params
-    params.require( :student).permit( :name)
+    params.require( :student).permit( :name, :session_id, :course_id, :attendance_id )
   end
 
  # DELETE /student/1

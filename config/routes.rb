@@ -9,4 +9,6 @@
   resources :courses 
   resources :course_loads
   resources :course_rosters
+  resources :attendances
+  resources :sessions
  end
