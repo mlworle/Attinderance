@@ -1,6 +1,6 @@
 class Attendance < ActiveRecord::Base
 
-  has_many :sessions
-  has_many :students
+  belongs_to :session
+  belongs_to :student
   
 end

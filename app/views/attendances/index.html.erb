@@ -4,7 +4,7 @@
     <% @attendances.each do |attendance| %>
 <!--Display Student, Date, Present -->		`
         <ul>
-        <li><%= attendance.student_id %></li>
+        <li><%= attendance.student.name %><%= attendance.session.date %></li>
         </ul>
     <% end %>
 
