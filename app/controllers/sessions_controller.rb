@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  #ISNECUD : note to self, method order
+
   def index
    @sessions = Session.all
   end

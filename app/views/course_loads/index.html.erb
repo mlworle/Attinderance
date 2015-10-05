@@ -1,7 +1,5 @@
-<h1> Attinderance | Courseload Index </h1>
-<p>This is where a list of all courseloads will be found. </p>
-<p>User/Teacher can choose to create a new courseload, update an existing one or delete a courseload from the list.</p>
-<br>
+<% provide(:title, "Index") %>
+<% provide(:intro, "This is where a list of all courseloads will be found.") %>
 <p>Courseload</p>
     <% @course_loads.each do |courseload| %>
         <ul>
@@ -14,9 +12,3 @@
 
 <br>
 <h2><p>Want to create a new courseload? Click here: <%= link_to 'New', new_course_load_path %></p></h2>
-<br>
-<br>
-<h2>Side Bar</h2>
-<p><%= render "side_bar" %></p>
-<p>Find me in app/views/course_loads/index.html.erb</p>
-<p>Updated by Mlworle on <%= Time.zone.now %></p>

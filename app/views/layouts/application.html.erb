@@ -8,7 +8,21 @@
 
 </head>
 <body>
-  <%= yield %>
 
+	<div id="header">Attinderance<%= yield(:title) %>
+		<div class="outer_container">
+			<div class="container">Create New</div>
+			<div class="container">Take Attendance</div>
+			<div class="container">Navigate</div>
+		</div>
+	</div>
+	<div class="intro">
+		<%= yield(:intro) %>
+	</div>
+	<div class = "site_map">
+		<%= render "site_map" %>
+	    <p>Updated by Mlworle on <%= Time.zone.now %></p>
+    </div>
+    <%= yield %>
 </body>
 </html>

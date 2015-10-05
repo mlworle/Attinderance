@@ -1,9 +1,5 @@
-<h1> Attinderance | Student Index </h1>
-
-<p>This is where a list of all students will be found. </p>
-
-<p>User/Teacher can choose to create a new student, update an existing one or delete a student from the list.</p>
-<br>
+<%= provide(:title, "Student Index") %>
+<%= provide(:intro, "Teacher can choose to create a new student, update an existing one or delete a student from the list.") %>
 <ul>
   <li>Student</li>
     <ol>
@@ -17,9 +13,3 @@
 </ul>
 <br>
 <h2><p>Want to create a new student? Click here: <%= link_to 'New', new_student_path  %></h2>
-<br>
-<br>
-<h2>SideBar</h2>
-<p><%= render "side_bar"  %></p>
-<p>Find me in app/views/students/index.html.erb</p>
-<p>Updated by Mlworle on <%= Time.zone.now  %></p>

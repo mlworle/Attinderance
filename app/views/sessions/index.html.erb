@@ -1,20 +1,12 @@
-<h1> Attinderance | Session Index </h1>
+<% provide(:title, " | Sessions") %>
+<% provide(:intro, "This is where a list of all sessions will be found.") %>
 
-<p>This is where a list of all sessions will be found. </p>
-
-<p>User/Teacher can choose to create a new session, update an existing one or delete a session from the list.</p>
-<br>
-  <% @sessions.each do |session|  %>
+<% @sessions.each do |session|  %>
     <!-- Want to display course name and session date -->
-    <ul><li>Course: <%= session.course.name %>   Date: <%= session.date %></li>
+    <ul>
+    	<li>Course: <%= session.course.name %>   Date: <%= session.date %></li>
        <%= link_to 'Delete', session, method: :delete, data: {confirm: 'Are you sure?'}  %>
     </ul>
-  <% end  %>
+<% end  %>
 <br>
 <h2><p>Want to create a new session? Click here: <%= link_to 'New', new_session_path  %></h2>
-<br>
-<br>
-<h2>SideBar</h2>
-<p><%= render "side_bar"  %></p>
-<p>Find me in app/views/sessions/index.html.erb</p>
-<p>Updated by Mlworle on <%= Time.zone.now  %></p>

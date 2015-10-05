@@ -1,32 +1,12 @@
 <% provide(:title, "Home") %>
+<% provide(:intro, "Welcome to Attinderance, the app for quick and easy attendance. Keep track of your students and members with just one click.") %>
 <!DOCTYPE html>
 <html>
   <head>
     <title><%= yield(:title) %> | Attinderance </title>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
   </head>
   <body>
-    <div id="topbar">
-      <div class="fixedwidth">
-      <h1>Attinderance | <%= yield(:title) %></h1>
-      <br>
-      <div id="site_map_div">
-        <ul>
-          <li>Teachers</li>
-          <li>Help</li>
-          <li>About</li>
-        </ul>
-      </div>
-      </div>
-    </div>
-<br>
-<div class="break">
-</div>
-</head>
-<body>
-    <p>Welcome to Attinderance, the app for quick and easy attendance. Keep track of your students and members with just one click.</p>
-    <h2>Site Map</h2>
-    <%= render 'side_bar'  %>
-    <p>Find me in app/views/static_pages/home.html.erb</p>
+    <div class="header"><%= yield(:title) %></div>
+    <div class="intro"><%= yield(:intro) %></div>
   </body>
 </html>

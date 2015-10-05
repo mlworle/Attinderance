@@ -1,9 +1,6 @@
-<h1> Attinderance | Teacher Index </h1>
+<% provide(:title, "Teacher Index") %>
+<% provide(:intro, "This is where a list of all teachers will be found. ") %>
 
-<p>This is where a list of all teachers will be found. </p>
-
-<p>User/Teacher can choose to create a new teacher, update an existing one or delete a teacher from the list.</p>
-<br>
 <p>Teacher</p>
     <ol>
     <% @teachers.each do |teacher| %>
@@ -17,9 +14,3 @@
   </ol>
 <br>
 <h2><p>Want to create a new teacher? Click here: <%= link_to 'New', new_teacher_path %></h2>
-<br>
-<br>
-<h2>Side Bar</h2>
-<p><%= render "side_bar" %></p>
-<p>Find me in app/views/teachers/index.html.erb</p>
-<p>Updated by Mlworle on <%= Time.zone.now %></p>
