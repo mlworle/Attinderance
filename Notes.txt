@@ -1,0 +1,20 @@
+Saturday 10/31
+-Validations for 
+	students
+	courses
+	sessions
+	attendances
+	course_rosters
+	course_loads
+-Rspec
+-Ligtening Talk
+ 	yield:
+ 	block vs hash
+ 	math and Ruby
+ 	math gems?
+ 	stat gems?
+ -blog
+
+Friday 10/30
+-See why there are no error messages displaying when new teacher invalid names are entered. Validation is ok, just no error messages.
+

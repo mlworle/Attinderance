@@ -14,7 +14,7 @@ class TeacherTest < ActiveSupport::TestCase
   end 
 
   test "name should be present" do
-  	@teacher.name = "     "
+  	@teacher.name = ""
   	assert_not @teacher.valid?
   end
 
