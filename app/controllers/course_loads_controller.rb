@@ -11,8 +11,11 @@ class CourseLoadsController < ApplicationController
   def create
     @course_load = CourseLoad.new(course_load_params)
 
-    @course_load.save
-    redirect_to course_loads_path
+    if @course_load.save
+      redirect_to course_loads_path
+    else
+      render(:new)
+    end
   end
 
   def course_load_params

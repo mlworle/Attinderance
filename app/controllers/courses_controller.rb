@@ -11,8 +11,11 @@ def index
   def create
     @course = Course.new(course_params)
 
-    @course.save
-    redirect_to courses_path
+    if @course.save
+      redirect_to courses_path
+    else
+      render(:new)
+    end
   end
 
   def course_params
@@ -23,19 +26,6 @@ def index
     @course = Course.find(params[:id])
   end
 
-  def update
-    respond_to do |format|
-      @course = Course.find(params[:id])
-      if @course.update(course_params)
-        format.html { redirect_to courses_path, notice: 'Course info was successfully updated.' }
-        format.json { render :show, status: :ok, location: @course }
-      else
-        format.html { render :edit }
-        format.json { render json: @course.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-  
   # DELETE /course/1
   # DELETE /course/1.json
   def destroy

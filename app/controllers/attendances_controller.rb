@@ -11,8 +11,11 @@ class AttendancesController < ApplicationController
   def create
     @attendance = Attendance.new(attendance_params)
 
-    @attendance.save
-    redirect_to attendances_path
+    if @attendance.save
+      redirect_to attendances_path
+    else
+      render(:new)
+    end
   end
 
   def attendance_params

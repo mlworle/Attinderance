@@ -5,11 +5,11 @@ class AttendanceTest < ActiveSupport::TestCase
   #   assert true
   # end
 
-#  def setup
-# 	@attendance = Attendance.new(present: true, student_id: 0)
-#  end
+  def setup
+ 	@attendance = Attendance.new(present: false, student_id: 0)
+  end
   	
-#  test "should be valid" do
-#  	asset @attendance.valid?
-#  end
+  test "should be valid" do
+  	assert_not @attendance.valid?
+  end
 end

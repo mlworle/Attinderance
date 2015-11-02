@@ -9,20 +9,6 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
-  def update
-    respond_to do |format|
-      @student = Student.find(params[:id])
-      if @student.update(student_params)
-        format.html { redirect_to students_path, notice: 'Student info was successfully updated.' }
-        format.json { render :show, status: :ok, location: @student }
-      else
-        format.html { render :edit }
-        format.json { render json: @student.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-
   def show
   end
 
@@ -33,8 +19,11 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)
 
-    @student.save
-    redirect_to students_path
+    if @student.save
+      redirect_to students_path
+    else
+      render(:new)
+    end
   end
 
   def student_params

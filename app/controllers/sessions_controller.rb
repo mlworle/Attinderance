@@ -14,8 +14,11 @@ class SessionsController < ApplicationController
   def create
     @session = Session.new(sessions_params)
 
-    @session.save
-    redirect_to sessions_path
+    if @session.save
+      redirect_to sessions_path
+    else
+      render(:new)
+    end
   end
 
   def destroy

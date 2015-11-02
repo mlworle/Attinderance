@@ -11,8 +11,11 @@ class CourseRostersController < ApplicationController
   def create
     @course_roster = CourseRoster.new(course_roster_params)
 
-    @course_roster.save
-    redirect_to course_rosters_path
+    if @course_roster.save
+      redirect_to course_rosters_path
+    else
+      render(:new)
+    end
   end
 
   def course_roster_params

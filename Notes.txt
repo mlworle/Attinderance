@@ -1,3 +1,11 @@
+Monday 11/2
+-Attendance taking experience needs work
+
++-for errors to show up on the site see create action in teacher controller
++-do that for all the controllers with new/create actions
++-validations for +sessions, +attendances, and +courses
++-in session_test.rb	@session = Session.new(date: "0000-00-00 00:00:00 UTC", course_id: nil, attendance_id: nil)
+
 Saturday 10/31
 -Validations for 
 	students
@@ -16,5 +24,5 @@ Saturday 10/31
  -blog
 
 Friday 10/30
--See why there are no error messages displaying when new teacher invalid names are entered. Validation is ok, just no error messages.
++-See why there are no error messages displaying when new teacher invalid names are entered. Validation is ok, just no error messages.
 
