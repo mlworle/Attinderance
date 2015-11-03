@@ -9,18 +9,34 @@
 </head>
 <body>
 
-	<div id="header">Attinderance<%= yield(:title) %>
+	<div id="header">Attinderance | <%= yield(:title) %>
 		<div class="outer_container">
-			<div class="container">Create New</div>
-			<div class="container">Take Attendance</div>
-			<div class="container">Navigate</div>
+			<div class="container">Create New
+				<ul><li><%= link_to 'Teacher', new_teacher_path %></li>
+					<li><%= link_to 'Student', new_student_path %></li>
+					<li><%= link_to 'Course', new_course_path %></li>
+				</ul>
+			</div>
+			<div class="container">Take Attendance
+				<ul><li><%= link_to 'Session', new_session_path %></li>
+					<li><%= link_to 'Attendance',new_attendance_path %></li>
+					
+				</ul>
+			</div>
+			<div class="container">Navigate
+				<ul><li><%= link_to 'Home', static_pages_home_path %></li>
+					<li><%= link_to 'Course Roster', course_rosters_path %></li>
+					<li><%= link_to 'Course Loads', course_loads_path %></li>
+					<li><%= link_to 'About', static_pages_about_path %></li>
+					<li><%= link_to 'Help', static_pages_help_path %></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class="intro">
 		<%= yield(:intro) %>
 	</div>
 	<div class = "site_map">
-		<%= render "site_map" %>
 	    <p>Updated by Mlworle on <%= Time.zone.now %></p>
     </div>
     <%= yield %>
