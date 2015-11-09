@@ -6,7 +6,7 @@ class TeacherTest < ActiveSupport::TestCase
   # end
 
   def setup
-  	@teacher = Teacher.new(name: "Example Teacher")
+  	@teacher = Teacher.new(name: "Example Teacher", email: "teacher@example.com", password: "Password1", password_confirmation: "Password1")
   end
   
   test "should be valid" do

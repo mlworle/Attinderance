@@ -37,6 +37,7 @@ def index
     # redirect_to static_pages_home_path
   end
 
+# This should not be here, index action is used instead. Remember to delete it and check the routes.
   def show
     @courses = Course.all
   end
