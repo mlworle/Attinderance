@@ -1,6 +1,0 @@
-Labor Day
-
-update app/views/attendance/index.html.erb and new.html.erb
-  copied from course_rosters and needs to be corrected for attendances
-
-
