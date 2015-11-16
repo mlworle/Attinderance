@@ -4,8 +4,9 @@ class AuthenticationsController < ApplicationController
   end
 
   def create
-  	teacher = Teacher.find_by(:email, teacher_params[:authentication][:email].downcase)
-  	if teacher && teacher.authenticate(teacher_params[:authentication][:password])
+  	teacher = Teacher.find_by(email: params[:authentication][:email].downcase)
+    debugger
+  	if teacher && teacher.authenticate(params[:authentication][:password])
   		# Log the user in and redirect to the user's show page
   	else
   		flash[:danger] = 'Invalid email/password combination'
@@ -16,8 +17,8 @@ class AuthenticationsController < ApplicationController
   def destroy
   end
 
-  def teacher_params
-  	params.require(:teacher).permit(:name, :email, :password)
+  def params
+  	params.require(:authentication).permit(:name, :email, :password)
   end
 
 end
