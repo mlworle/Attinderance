@@ -5,7 +5,6 @@ class AuthenticationsController < ApplicationController
 
   def create
   	teacher = Teacher.find_by(email: params[:authentication][:email].downcase)
-    debugger
   	if teacher && teacher.authenticate(params[:authentication][:password])
   		# Log the user in and redirect to the user's show page
   	else
@@ -15,9 +14,10 @@ class AuthenticationsController < ApplicationController
   end
 
   def destroy
+    
   end
 
-  def params
+  def authentication_params
   	params.require(:authentication).permit(:name, :email, :password)
   end
 
