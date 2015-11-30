@@ -15,6 +15,7 @@
       <div class="field">
         <%= f.label :name %><br>
         <%= f.text_field :name %>
+        <% if f.text_field.nil? %><%= link_to new_teacher_path %><% end %>
       </div>
     </div>
 

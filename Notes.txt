@@ -1,3 +1,26 @@
+Monday 11/30
+doing TDD and BDD with Rspec
+want user to checkout the site
+  able to view the front material with mock up of class creation, student input, and attendance
+  able to navigate to about, help and home pages 
+  able to sign up or sign in
+
+  all other pages are for teachers only
+  user must sign up to be a teacher
+  teachers can 
+    create a class
+    delete a class
+    create a student
+    delete a student
+    take attendance 
+    send email to delete
+      self
+
+use Devise for authentication.....NO!! just read github docs and not recommended so early in my learning.
+
+Now RailsCasts by Ryan Bates and create app auth.
+
+
 Monday 11/2
 -Attendance taking experience needs work
 
