@@ -1,3 +1,9 @@
+Monday 12/22
+OMG! A month!
+Need to get this branch working so that I can close it and do REAL testing!
+Forgot how to call RSpec. Bummer, need to just keep the fingers moving.
+
+
 Monday 11/30
 doing TDD and BDD with Rspec
 want user to checkout the site
